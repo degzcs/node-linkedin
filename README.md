@@ -134,8 +134,24 @@ OR
 linkedin.people.id('linkedin_id', ['id', 'first-name', 'last-name'], function(err, $in) {
     // Loads the profile by id.
 });
-
 ```
+### Share Rich Content
+
+```javascript
+linkedin.people.share({
+                        "comment": "Check out the LinkedIn Share API!",
+                        "content": {
+                          "title": " LinkedIn Developers Documentation On Using the Share API ",
+                          "description": " Leverage the Share API to maximize engagement on user-generated content on LinkedIn",
+                          "submitted-url": " https://developer.linkedin.com/documents/share-api ",
+                          "submitted-image-url": " https://m3.licdn.com/media/p/3/000/124/1a6/089a29a.png"
+                        },
+                        "visibility": { "code": "anyone" }
+  }, function(err, data){
+    // Returns 201 Created on success
+  });
+```
+
 
 ## Connections
 
